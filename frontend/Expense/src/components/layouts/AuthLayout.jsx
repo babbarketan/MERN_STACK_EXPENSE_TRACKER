@@ -3,21 +3,7 @@ import { LuTrendingUpDown } from "react-icons/lu";
 import card2 from "../../assets/images/card2.png";
 
 // StatsInfoCard component fixed
-const StatsInfoCard = ({ icon, label, value, colors }) => {
-  return (
-    <div className="">
-      <div
-        className={`w-12 h-12 flex items-center justify-center text-[26px] text-white ${colors} rounded-full drop-shadow-xl`}
-      >
-        {icon}
-      </div>
-      <div>
-        <h6 className="">{label}</h6>
-        <span className="">${value}</span>
-      </div>
-    </div>
-  );
-};
+
 
 // AuthLayout component
 const AuthLayout = ({ children }) => {
@@ -52,3 +38,21 @@ const AuthLayout = ({ children }) => {
 };
 
 export default AuthLayout;
+
+
+const StatsInfoCard = ({ icon, label, value, colors }) => {
+  return (
+    <div className="flex gap-6 bg-white p-4 rounded-xl shadow-md shadowpruple-400/10 border-gray-200/50 z-10">
+      <div
+        className={`w-12 h-12 flex items-center justify-center text-[26px] text-white ${colors} rounded-full drop-shadow-xl`}
+      >
+        {icon}
+      </div>
+      <div>
+        <h6 className="text-xs text-gray-500 mb-1">{label}</h6>
+        <span className="text-[20px]">${value}</span>
+      </div>
+    </div>
+  );
+};
+
